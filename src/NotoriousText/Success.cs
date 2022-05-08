@@ -1,6 +1,6 @@
 namespace NotoriousText; 
 
-public class Success<A> : Parser<A> {
+public class Success<A> : IParser<A> {
     
     private readonly A item;
     

@@ -1,10 +1,10 @@
 namespace NotoriousText; 
 
-public class Map<A, B> : Parser<B> {
+public class Map<A, B> : IParser<B> {
 
-    private readonly Parser<A> parser;
+    private readonly IParser<A> parser;
     private readonly Func<A, B> fn;
-    public Map(Parser<A> parser, Func<A, B> fn) {
+    public Map(IParser<A> parser, Func<A, B> fn) {
         this.fn = fn;
         this.parser = parser;
     }

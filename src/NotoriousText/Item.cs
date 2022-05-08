@@ -1,6 +1,6 @@
 namespace NotoriousText; 
 
-public class Item : Parser<char> {
+public class Item : IParser<char> {
     
     public Item() {}
 

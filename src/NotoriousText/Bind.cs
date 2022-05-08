@@ -1,11 +1,11 @@
 namespace NotoriousText; 
 
-public class Bind<A, B> : Parser<B> {
+public class Bind<A, B> : IParser<B> {
 
-    private readonly Parser<A> parser;
-    private readonly Func<A, Parser<B>> fn;
+    private readonly IParser<A> parser;
+    private readonly Func<A, IParser<B>> fn;
     
-    public Bind(Parser<A> parser, Func<A, Parser<B>> fn) {
+    public Bind(IParser<A> parser, Func<A, IParser<B>> fn) {
         this.fn = fn;
         this.parser = parser;
     }
