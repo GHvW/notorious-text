@@ -1,0 +1,10 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5f42ab95_002D184f_002D4e5a_002Db7c6_002D472cf5148a8b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="WhenAskingForAnItem" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenSuccessIsParsed&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenZeroIsParsed&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenSuccessIsMapped&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenZeroIsMapped&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenParsingToSatisfyACondition&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
