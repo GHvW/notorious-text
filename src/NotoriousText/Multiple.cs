@@ -2,7 +2,7 @@ using System.Collections.Immutable;
 
 namespace NotoriousText; 
 
-public class Multiple<A> : IParser<ImmutableList<A>> {
+public class Multiple<A> : IParser<ImmutableStack<A>> {
 
     private readonly IParser<A> parser;
     
@@ -10,10 +10,10 @@ public class Multiple<A> : IParser<ImmutableList<A>> {
         this.parser = parser;
     }
 
-    public (ImmutableList<A>, InputState)? Parse(InputState input) =>
+    public (ImmutableStack<A>, InputState)? Parse(InputState input) =>
         (from item in this.parser
          from rest in new Multiple<A>(this.parser)
-         select rest.Add(item))
-        .Or(new Success<ImmutableList<A>>(ImmutableList.Create<A>()))
+         select rest.Push(item))
+        .Or(new Success<ImmutableStack<A>>(ImmutableStack<A>.Empty))
         .Parse(input);
 }

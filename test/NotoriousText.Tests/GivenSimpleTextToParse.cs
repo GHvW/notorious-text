@@ -1,3 +1,6 @@
+using System.Collections.Immutable;
+using System.Linq;
+
 using FluentAssertions;
 
 using Xunit;
@@ -80,5 +83,35 @@ public class GivenSimpleTextToParse {
         result.Should().Be('h');
         rest.Position.Should().Be(1);
         rest.Input.Should().Be("hello world!");
+    }
+    
+    [Fact]
+    public void WhenParsingChar() {
+        var (result, rest) = new Char('h').Parse(this.input).Value;
+
+        result.Should().Be('h');
+        rest.Position.Should().Be(1);
+        rest.Input.Should().Be("hello world!");
+    }
+
+    [Fact]
+    public void WhenParsingAWord() {
+        var (result, rest) = new Word().Parse(this.input).Value;
+
+        foreach (var (item, i) in result.Zip(Enumerable.Range(0, int.MaxValue))) {
+            item.Should().Be(this.input.Input[i]);
+        }
+
+        rest.Input.Should().Be("hello world!");
+        rest.Position.Should().Be(5);
+    }
+
+    [Fact]
+    public void WhenParsingAToken() {
+        var (result, rest) = new Token<ImmutableStack<char>>(new Word()).Parse(this.input).Value;
+
+        result.Aggregate("", (s, next) => s + next).Should().Be("hello");
+        rest.Input.Should().Be("hello world!");
+        rest.Position.Should().Be(6);
     }
 }
