@@ -63,4 +63,22 @@ public class GivenSimpleTextToParse {
         rest.Position.Should().Be(1);
         rest.Input.Should().Be("hello world!");
     }
+    
+    [Fact]
+    public void WhenParsingOrForFirstChar() {
+        var (result, rest) = new Satisfies(it => it == 'h').Or(new Success<char>('9')).Parse(this.input).Value;
+
+        result.Should().Be('h');
+        rest.Position.Should().Be(1);
+        rest.Input.Should().Be("hello world!");
+    }
+    
+    [Fact]
+    public void WhenParsingOrMissingChar() {
+        var (result, rest) = new Satisfies(it => it == '9').Or(new Satisfies(it => it == 'h')).Parse(this.input).Value;
+
+        result.Should().Be('h');
+        rest.Position.Should().Be(1);
+        rest.Input.Should().Be("hello world!");
+    }
 }

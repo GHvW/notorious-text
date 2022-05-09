@@ -6,5 +6,7 @@
     &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenSuccessIsMapped&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenZeroIsMapped&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenParsingToSatisfyACondition&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenParsingOrForFirstChar&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenParsingOrMissingChar&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

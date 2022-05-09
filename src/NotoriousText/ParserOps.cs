@@ -13,4 +13,7 @@ public static class ParserOps {
         Func<A, IParser<B>> fn, 
         Func<A, B, C> selector) =>
             new BindWithSelector<A,B,C>(parser, fn, selector);
+
+    public static IParser<A> Or<A>(this IParser<A> first, IParser<A> other) =>
+        new Or<A>(first, other);
 }
