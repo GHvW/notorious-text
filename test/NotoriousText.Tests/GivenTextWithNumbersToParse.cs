@@ -21,4 +21,14 @@ public class GivenTextWithNumbersToParse {
         rest.Position.Should().Be(1);
         rest.Input.Should().Be("867-5309");
     }
+    
+    [Fact]
+     public void WhenParsingANumber() {
+ 
+         var (result, rest) = new NaturalNumber().Parse(this.input).Value;
+ 
+         result.Should().Be(8);
+         rest.Position.Should().Be(1);
+         rest.Input.Should().Be("867-5309");
+     }   
 }
