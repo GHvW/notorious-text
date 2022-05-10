@@ -1,19 +1,24 @@
 namespace NotoriousText; 
 
-public class Bracket<A, B> : IParser<A> {
+public class Bracket<A, B, C> : IParser<A> {
 
     private readonly IParser<A> parser;
-    private readonly IParser<B> bracketParser;
+    private readonly IParser<B> openBracket;
+    private readonly IParser<C> closeBracket;
 
-    public Bracket(IParser<A> parser, IParser<B> bracketParser) {
-        this.parser = parser;
-        this.bracketParser = bracketParser;
-    }
+    public Bracket(
+        IParser<A> parser, 
+        IParser<B> openBracket, 
+        IParser<C> closeBracket) {
+            this.parser = parser;
+            this.openBracket = openBracket;
+            this.closeBracket = closeBracket;
+        }
 
     public (A, InputState)? Parse(InputState input) =>
-        (from _ in this.bracketParser
+        (from _open in this.openBracket
          from item in this.parser
-         from _ in this.bracketParser
+         from _close in this.closeBracket
          select item)
         .Parse(input);
 }

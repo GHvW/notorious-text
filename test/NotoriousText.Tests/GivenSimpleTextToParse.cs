@@ -24,6 +24,16 @@ public class GivenSimpleTextToParse {
         rest.Position.Should().Be(1);
         rest.Input.Should().Be("hello world!");
     }
+
+    [Fact]
+    public void WhenParsingASingleItemInput() {
+        var theInput = new InputState(0, "a");
+        var (result, rest) = new Item().Parse(theInput).Value;
+
+        result.Should().Be('a');
+        rest.Position.Should().Be(1);
+        rest.Input.Should().Be("a");
+    }
     
     [Fact]
     public void WhenSuccessIsParsed() {
@@ -113,5 +123,19 @@ public class GivenSimpleTextToParse {
         result.Aggregate("", (s, next) => s + next).Should().Be("hello");
         rest.Input.Should().Be("hello world!");
         rest.Position.Should().Be(6);
+    }
+
+    [Fact]
+    public void WhenBinding() {
+         var (result, rest) = 
+             (from h in new Char('h')
+              from e in new Char('e')
+              select h.ToString() + e.ToString())
+             .Parse(this.input)
+             .Value;
+
+         result.Should().Be("he");
+         rest.Input.Should().Be("hello world!");
+         rest.Position.Should().Be(2);       
     }
 }
