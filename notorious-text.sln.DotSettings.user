@@ -13,5 +13,7 @@
     &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenParsingAWord&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenParsingAToken&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenTextWithNumbersToParse.WhenParsingANumber&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenTextWithNumbersToParse.WhenParsingAPositiveInt&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenTextWithNumbersToParse.WhenParsingANegativeInt&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

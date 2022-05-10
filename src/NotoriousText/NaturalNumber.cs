@@ -1,8 +1,10 @@
 namespace NotoriousText;
 
-public record NaturalNumber() : IParser<uint> {
-    public (uint, InputState)? Parse(InputState input) =>
-        new Digit()
-            .Select(it => UInt32.Parse(it.ToString()))
+public record NaturalNumber() : IParser<int> {
+    
+    public (int, InputState)? Parse(InputState input) =>
+        new AtLeastOne<char>( new Digit())
+            .Select(it =>
+                it.Aggregate(0, (acc, c) => 10 * acc + (c -'0')))
             .Parse(input);
 }
