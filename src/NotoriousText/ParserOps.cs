@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace NotoriousText; 
 
 public static class ParserOps {
@@ -16,4 +18,7 @@ public static class ParserOps {
 
     public static IParser<A> Or<A>(this IParser<A> first, IParser<A> other) =>
         new Or<A>(first, other);
+
+    public static IParser<A> BracketedBy<A, B>(this IParser<A> parser, IParser<B> bracketParser) =>
+        new Bracket<A, B>(parser, bracketParser);
 }
