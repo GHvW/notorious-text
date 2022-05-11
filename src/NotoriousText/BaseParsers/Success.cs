@@ -1,4 +1,4 @@
-namespace NotoriousText; 
+namespace NotoriousText.BaseParsers; 
 
 public class Success<A> : IParser<A> {
     

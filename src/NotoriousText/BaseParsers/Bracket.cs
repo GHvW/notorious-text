@@ -1,4 +1,4 @@
-namespace NotoriousText; 
+namespace NotoriousText.BaseParsers; 
 
 public class Bracket<A, B, C> : IParser<A> {
 

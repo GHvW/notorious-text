@@ -3,6 +3,8 @@ using System.Linq;
 
 using FluentAssertions;
 
+using NotoriousText.BaseParsers;
+
 using Xunit;
 
 namespace NotoriousText.Tests; 
@@ -137,5 +139,25 @@ public class GivenSimpleTextToParse {
          result.Should().Be("he");
          rest.Input.Should().Be("hello world!");
          rest.Position.Should().Be(2);       
+    }
+
+    [Fact]
+    public void WhenParsingAString() {
+        var (result, rest) =
+            new Str("hello").Parse(this.input).Value;
+
+        result.Should().Be("hello");
+        rest.Position.Should().Be(5);
+        rest.Input.Should().Be("hello world!");
+    }
+
+    [Fact]
+    public void WhenParsingAnEmptyString() {
+        var (result, rest) =
+            new Str("").Parse(this.input).Value;
+
+        result.Should().Be("");
+        rest.Position.Should().Be(0);
+        rest.Input.Should().Be("hello world!");
     }
 }

@@ -1,5 +1,7 @@
 using FluentAssertions;
 
+using NotoriousText.BaseParsers;
+
 using Xunit;
 
 namespace NotoriousText.Tests; 

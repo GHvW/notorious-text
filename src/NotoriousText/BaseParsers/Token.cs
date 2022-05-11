@@ -1,4 +1,4 @@
-namespace NotoriousText; 
+namespace NotoriousText.BaseParsers; 
 
 public class Token<A> : IParser<A> {
 

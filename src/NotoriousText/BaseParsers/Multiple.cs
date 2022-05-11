@@ -1,6 +1,6 @@
 using System.Collections.Immutable;
 
-namespace NotoriousText; 
+namespace NotoriousText.BaseParsers; 
 
 public class Multiple<A> : IParser<ImmutableStack<A>> {
 

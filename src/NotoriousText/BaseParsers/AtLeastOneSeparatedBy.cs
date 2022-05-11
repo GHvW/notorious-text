@@ -1,7 +1,6 @@
 using System.Collections.Immutable;
-using System.Threading.Tasks.Dataflow;
 
-namespace NotoriousText; 
+namespace NotoriousText.BaseParsers;
 
 public class AtLeastOneSeparatedBy<A, B> : IParser<ImmutableStack<A>> {
 
@@ -16,8 +15,8 @@ public class AtLeastOneSeparatedBy<A, B> : IParser<ImmutableStack<A>> {
     public (ImmutableStack<A>, InputState)? Parse(InputState input) =>
         (from first in this.parser
          from rest in new Multiple<A>(from _ in this.separator
-                                                     from item in this.parser
-                                                     select item)
+                                      from item in this.parser
+                                      select item)
          select rest.Push(first))
         .Parse(input);
 }

@@ -1,6 +1,6 @@
 using System.Collections.Immutable;
 
-namespace NotoriousText;
+namespace NotoriousText.BaseParsers;
 
 public record Word() : IParser<ImmutableStack<char>> {
     public (ImmutableStack<char>, InputState)? Parse(InputState input) =>

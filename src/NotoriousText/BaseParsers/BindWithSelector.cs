@@ -1,4 +1,4 @@
-namespace NotoriousText; 
+namespace NotoriousText.BaseParsers; 
 
 public class BindWithSelector<A, B, C> : IParser<C> {
 

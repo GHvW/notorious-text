@@ -1,6 +1,4 @@
-using System.Runtime.CompilerServices;
-
-namespace NotoriousText; 
+namespace NotoriousText.BaseParsers; 
 
 public static class ParserOps {
 

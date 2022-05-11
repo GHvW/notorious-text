@@ -1,4 +1,4 @@
-namespace NotoriousText;
+namespace NotoriousText.BaseParsers;
 
 public record Digit() : IParser<char> {
     public (char, InputState)? Parse(InputState input) =>
