@@ -160,4 +160,18 @@ public class GivenSimpleTextToParse {
         rest.Position.Should().Be(0);
         rest.Input.Should().Be("hello world!");
     }
+    
+     [Fact]
+     public void WhenParsingAStringAndAnotherString() {
+         var (result, rest) =
+             new Token<string>(new Str("hello"))
+                 .And(new Str("world"))
+                 .Parse(this.input)
+                 .Value;
+ 
+         result.Item1.Should().Be("hello");
+         result.Item2.Should().Be("world");
+         rest.Position.Should().Be(11);
+         rest.Input.Should().Be("hello world!");
+     }   
 }

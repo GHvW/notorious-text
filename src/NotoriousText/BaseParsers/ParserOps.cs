@@ -19,4 +19,7 @@ public static class ParserOps {
 
     public static IParser<A> BracketedBy<A, B, C>(this IParser<A> parser, IParser<B> openBracket, IParser<C> closeBracket) =>
         new Bracket<A, B, C>(parser, openBracket, closeBracket);
+
+    public static IParser<(A, B)> And<A, B>(this IParser<A> first, IParser<B> next) =>
+        new And<A, B>(first, next);
 }
