@@ -6,3 +6,5 @@ obj
 .idea
 .ionide
 .metals
+
+*.user
