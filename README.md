@@ -1,5 +1,6 @@
 # notorious-text
-Well Known Text Parser for .NET
+
+A Well Known Text Parser Combinator library for .NET
 
 ---
 
