@@ -1,3 +1,5 @@
+using System.Collections.Immutable;
+
 namespace NotoriousText.BaseParsers; 
 
 public static class ParserOps {
@@ -22,4 +24,7 @@ public static class ParserOps {
 
     public static IParser<(A, B)> And<A, B>(this IParser<A> first, IParser<B> next) =>
         new And<A, B>(first, next);
+    
+    public static IParser<ImmutableStack<A>> AtLeastOneSeparatedBy<A, B>(this IParser<A> first, IParser<B> separator) =>
+        new AtLeastOneSeparatedBy<A, B>(first, separator);
 }

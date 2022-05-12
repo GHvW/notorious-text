@@ -174,4 +174,18 @@ public class GivenSimpleTextToParse {
          rest.Position.Should().Be(11);
          rest.Input.Should().Be("hello world!");
      }   
+     
+      [Fact]
+      public void WhenParsingAtLeastOneWordSeparatedByASpace() {
+          var (result, rest) =
+              new Word()
+                  .AtLeastOneSeparatedBy(new Character(' '))
+                  .Parse(this.input)
+                  .Value;
+  
+          result.Peek().Peek().Should().Be('h');
+          result.Pop().Peek().Peek().Should().Be('w');
+          rest.Position.Should().Be(11);
+          rest.Input.Should().Be("hello world!");
+      }    
 }

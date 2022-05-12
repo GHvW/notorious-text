@@ -20,7 +20,7 @@ public class GivenAWKTPoint {
 
         [Fact]
         public void WhenParsed() {
-            var (result, rest) = new Point().Parse(this.input).Value;
+            var (result, rest) = new PointText().Parse(this.input).Value;
 
             result.Should().Be(new Geometries.Point(1, 2));
             rest.Input.Should().Be("POINT(1 2)");
