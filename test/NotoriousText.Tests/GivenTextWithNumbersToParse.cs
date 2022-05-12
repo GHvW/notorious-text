@@ -11,7 +11,7 @@ public class GivenTextWithNumbersToParse {
     private readonly InputState input;
 
     public GivenTextWithNumbersToParse() {
-        this.input = new InputState(0, "867-5309");
+        this.input = new InputState(0, "867.5309");
     }
 
     [Fact]
@@ -21,7 +21,7 @@ public class GivenTextWithNumbersToParse {
 
         result.Should().Be('8');
         rest.Position.Should().Be(1);
-        rest.Input.Should().Be("867-5309");
+        rest.Input.Should().Be("867.5309");
     }
     
     [Fact]
@@ -31,7 +31,7 @@ public class GivenTextWithNumbersToParse {
  
          result.Should().Be(867);
          rest.Position.Should().Be(3);
-         rest.Input.Should().Be("867-5309");
+         rest.Input.Should().Be("867.5309");
      }
      
      [Fact]
@@ -41,7 +41,7 @@ public class GivenTextWithNumbersToParse {
   
           result.Should().Be(867);
           rest.Position.Should().Be(3);
-          rest.Input.Should().Be("867-5309");
+          rest.Input.Should().Be("867.5309");
       }
       
        [Fact]
@@ -52,6 +52,16 @@ public class GivenTextWithNumbersToParse {
     
             result.Should().Be(-867);
             rest.Position.Should().Be(4);
-            rest.Input.Should().Be("-867-5309");
+            rest.Input.Should().Be("-867.5309");
         }
+        
+        [Fact]
+         public void WhenParsingARationalNumber() {
+     
+             var (result, rest) = new RationalNumber().Parse(this.input).Value;
+     
+             result.Should().Be(867.5309);
+             rest.Position.Should().Be(8);
+             rest.Input.Should().Be("867.5309");
+         }
 }

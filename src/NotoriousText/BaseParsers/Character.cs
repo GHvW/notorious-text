@@ -1,10 +1,10 @@
 namespace NotoriousText.BaseParsers; 
 
-public class Char : IParser<char> {
+public class Character : IParser<char> {
 
     private readonly char c;
 
-    public Char(char c) {
+    public Character(char c) {
         this.c = c;
     }
 

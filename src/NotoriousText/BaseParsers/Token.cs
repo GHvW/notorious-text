@@ -10,7 +10,7 @@ public class Token<A> : IParser<A> {
 
     public (A, InputState)? Parse(InputState input) =>
         (from item in this.parser
-         from _ in new Whitespace()
+         from _ in new Space()
          select item)
         .Parse(input);
 }

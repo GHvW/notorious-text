@@ -99,7 +99,7 @@ public class GivenSimpleTextToParse {
     
     [Fact]
     public void WhenParsingChar() {
-        var (result, rest) = new Char('h').Parse(this.input).Value;
+        var (result, rest) = new Character('h').Parse(this.input).Value;
 
         result.Should().Be('h');
         rest.Position.Should().Be(1);
@@ -130,8 +130,8 @@ public class GivenSimpleTextToParse {
     [Fact]
     public void WhenBinding() {
          var (result, rest) = 
-             (from h in new Char('h')
-              from e in new Char('e')
+             (from h in new Character('h')
+              from e in new Character('e')
               select h.ToString() + e.ToString())
              .Parse(this.input)
              .Value;

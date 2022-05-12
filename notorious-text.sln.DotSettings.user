@@ -19,10 +19,5 @@
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=efb085fd_002Dce1d_002D49bd_002D933c_002Dff398b61240f/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="WhenParsingTheItemBetweenBraces" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenInputBetweenBraces.WhenParsingTheItemBetweenBraces&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenBinding&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenParsingASingleItemInput&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;xUnit::A378C74E-81D7-47B0-A556-5F680B98F04D::net6.0::NotoriousText.Tests.GivenSimpleTextToParse.WhenParsingAStringAndAnotherString&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+  &lt;Project Location="C:\Users\ghvw\projects\dotnet\notorious-text\test\NotoriousText.Tests" Presentation="&amp;lt;test&amp;gt;\&amp;lt;NotoriousText.Tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

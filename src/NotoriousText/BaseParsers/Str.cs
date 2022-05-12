@@ -14,7 +14,7 @@ public class Str : IParser<string> {
     public (string, InputState)? Parse(InputState input) =>
         (this.str switch {
             "" => new Success<string>(""),
-            var s => (from _ in new Char(s[0])
+            var s => (from _ in new Character(s[0])
                       from _rest in new Str(s[1..])
                       select s)
         })

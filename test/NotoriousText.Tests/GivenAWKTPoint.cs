@@ -1,6 +1,11 @@
 ﻿using System;
 
+using FluentAssertions;
+
 using Xunit;
+using NotoriousText;
+using NotoriousText.BaseParsers;
+using NotoriousText.WKTParsers;
 
 namespace NotoriousText.Tests;
 
@@ -8,14 +13,18 @@ public class GivenAWKTPoint {
 
     public class AndThePointIsNOTEmpty {
 
-        private readonly string point;
+        private readonly InputState input;
         public AndThePointIsNOTEmpty() {
-            this.point = "POINT(1 2)";
+            this.input = new InputState(0, "POINT(1 2)");
         }
 
         [Fact]
         public void WhenParsed() {
+            var (result, rest) = new Point().Parse(this.input).Value;
 
+            result.Should().Be(new Geometries.Point(1, 2));
+            rest.Input.Should().Be("POINT(1 2)");
+            rest.Position.Should().Be(10);
         }
     }
 

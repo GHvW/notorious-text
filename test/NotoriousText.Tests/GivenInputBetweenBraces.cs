@@ -14,7 +14,7 @@ public class GivenInputBetweenBraces {
         
         var (result, rest) = 
             new NaturalNumber()
-                .BracketedBy(new Char('('), new Char(')'))
+                .Between(new Character('('), new Character(')'))
                 .Parse(input)
                 .Value;
 
