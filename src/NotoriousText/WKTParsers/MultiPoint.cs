@@ -4,9 +4,9 @@ using NotoriousText.BaseParsers;
 
 namespace NotoriousText.WKTParsers;
 
-public record MultiPoint() : IParser<ImmutableStack<(int, int)>> {
+public record MultiPoint() : IParser<ImmutableStack<(double, double)>> {
 
-    public (ImmutableStack<(int, int)>, InputState)? Parse(InputState input) =>
+    public (ImmutableStack<(double, double)>, InputState)? Parse(InputState input) =>
         new Point()
             .AtLeastOneSeparatedBy(new Token<char>(new Character(',')))
             .Parse(input);

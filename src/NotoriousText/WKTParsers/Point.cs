@@ -3,10 +3,10 @@ using NotoriousText.BaseParsers;
 
 namespace NotoriousText.WKTParsers;
 
-public class Point : IParser<(int, int)> {
+public class Point : IParser<(double, double)> {
 
-    public ((int, int), InputState)? Parse(InputState input) =>
-        new Token<int>(new NaturalNumber())
-            .And(new Token<int>(new NaturalNumber()))
+    public ((double, double), InputState)? Parse(InputState input) =>
+        new Token<double>(new RationalNumber())
+            .And(new Token<double>(new RationalNumber()))
             .Parse(input);
 }
