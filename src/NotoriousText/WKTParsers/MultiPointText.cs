@@ -10,6 +10,6 @@ public record MultiPointText() : IParser<Geometries.MultiPoint> {
             .SelectMany(_ => 
                 new MultiPoint()
                     .Between(new OpenParen(), new CloseParen())
-                    .Select(points => new Geometries.MultiPoint(points.Select(PointOps.Create))))
+                    .Select(points => new Geometries.MultiPoint(points.Select(Geometries.Point.Create))))
             .Parse(input);
 }
