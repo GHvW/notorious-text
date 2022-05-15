@@ -8,8 +8,8 @@ public record MultiPointText() : IParser<Geometries.MultiPoint> {
     public (Geometries.MultiPoint, InputState)? Parse(InputState input) =>
         new Str("MULTIPOINT")
             .SelectMany(_ => 
-                new MultiPoint()
+                new PointSeq()
                     .Between(new OpenParen(), new CloseParen())
-                    .Select(points => new Geometries.MultiPoint(points.Select(Geometries.Point.Create))))
+                    .Select(points => new Geometries.MultiPoint(points)))
             .Parse(input);
 }

@@ -29,5 +29,7 @@ public class GivenAWKTLineString {
         foreach (var (item, expectedItem) in result.Points.Zip(this.expected.Points)) {
             item.Should().Be(expectedItem);
         }
+
+        rest.Position.Should().Be(32);
     }
 }

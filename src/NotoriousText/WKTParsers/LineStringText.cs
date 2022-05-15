@@ -7,8 +7,8 @@ public record LineStringText() : IParser<Geometries.LineString> {
     public (Geometries.LineString, InputState)? Parse(InputState input) =>
         new Token<string>(new Str("LINESTRING"))
             .SelectMany(_ => 
-                new LineString()
+                new PointSeq()
                     .Between(new OpenParen(), new CloseParen())
-                    .Select(Geometries.LineString.Create))
+                    .Select(it => new Geometries.LineString(it)))
             .Parse(input);
 }
