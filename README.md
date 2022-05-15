@@ -8,9 +8,8 @@ A Well Known Text Parser Combinator library for .NET
 
 ---
 
-#### Alternatives
+### Alternatives
 - [NetTopologySuite](https://github.com/NetTopologySuite/NetTopologySuite)
-  - NetTopologySuite contains a WKT Reader
 
 ---
 
